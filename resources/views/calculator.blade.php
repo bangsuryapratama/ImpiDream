@@ -5,16 +5,12 @@
 @section('canonical_url', route('calculator'))
 
 @section('content')
-<div class="py-12 sm:py-16 bg-[#FAFAF8] dark:bg-slate-950 transition-colors duration-300">
+<div class="pt-28 pb-16 sm:pt-36 sm:pb-24 lg:pt-40 bg-[#FAFAF8] dark:bg-slate-950 transition-colors duration-300">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {{-- Header Title --}}
-        <div class="text-center space-y-4 mb-12">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-[#2E7D64] dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-                Kalkulator Impian Interaktif
-            </span>
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        <div class="text-center space-y-3 mb-10 sm:mb-12">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                 Simulasikan Target Menabung Harianmu
             </h1>
             <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
