@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Web\Admin\AuthController;
 use App\Http\Controllers\Web\Admin\DashboardController;
+use App\Http\Controllers\Web\Admin\MarketplaceController as AdminMarketplaceController;
 use App\Http\Controllers\Web\NewsController;
 use App\Http\Middleware\EnsureAdmin;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,10 @@ Route::get('/fitur', function () {
     return view('features');
 })->name('features');
 
+Route::get('/kalkulator', function () {
+    return view('calculator');
+})->name('calculator');
+
 // News & Articles Routes
 Route::get('/berita', [NewsController::class, 'index'])->name('news.index');
 Route::get('/berita/{slug}', [NewsController::class, 'show'])->name('news.show');
@@ -43,6 +48,7 @@ Route::get('/sitemap.xml', function () {
     // Static Pages
     $xml .= '<url><loc>' . $baseUrl . '/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>';
     $xml .= '<url><loc>' . $baseUrl . '/fitur</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>';
+    $xml .= '<url><loc>' . $baseUrl . '/kalkulator</loc><changefreq>daily</changefreq><priority>0.9</priority></url>';
     $xml .= '<url><loc>' . $baseUrl . '/tentang-kami</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>';
     $xml .= '<url><loc>' . $baseUrl . '/berita</loc><changefreq>daily</changefreq><priority>0.9</priority></url>';
 
@@ -72,6 +78,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
     // Authenticated Admin Routes (Protected by EnsureAdmin)
     Route::middleware(['auth:admin', EnsureAdmin::class])->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        
+        // Marketplace Catalog Management
+        Route::get('/marketplace', [AdminMarketplaceController::class, 'index'])->name('marketplace.index');
+        Route::post('/marketplace', [AdminMarketplaceController::class, 'store'])->name('marketplace.store');
+        Route::post('/marketplace/{id}/toggle', [AdminMarketplaceController::class, 'toggleStatus'])->name('marketplace.toggle');
+        Route::delete('/marketplace/{id}', [AdminMarketplaceController::class, 'destroy'])->name('marketplace.destroy');
+
         Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     });
 

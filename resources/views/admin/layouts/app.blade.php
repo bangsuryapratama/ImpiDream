@@ -112,8 +112,8 @@
 
             <div class="px-3 pt-4 pb-2 text-[10px] font-bold text-slate-400 uppercase tracking-wider">Manajemen Sistem</div>
 
-            <a href="#"
-                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800 transition-all">
+            <a href="{{ route('admin.marketplace.index') }}"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-xs font-bold transition-all {{ request()->routeIs('admin.marketplace.*') ? 'bg-[#2E7D64] text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800' }}">
                 <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                 <span>Produk Marketplace</span>
             </a>

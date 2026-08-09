@@ -119,7 +119,7 @@
                 {{-- Desktop Navigation --}}
                 <nav class="hidden md:flex items-center gap-8">
                     <a href="{{ route('features') }}" class="text-sm font-semibold {{ request()->routeIs('features') ? 'text-[#2E7D64] dark:text-[#6FBF9A] font-bold' : 'text-slate-600 dark:text-slate-300 hover:text-[#2E7D64] dark:hover:text-[#6FBF9A]' }} transition-colors" data-i18n="nav_features">Fitur</a>
-                    <a href="{{ route('home') }}#kalkulator" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-[#2E7D64] dark:hover:text-[#6FBF9A]' }} transition-colors" data-i18n="nav_calc">Kalkulator</a>
+                    <a href="{{ route('calculator') }}" class="text-sm font-semibold {{ request()->routeIs('calculator') ? 'text-[#2E7D64] dark:text-[#6FBF9A] font-bold' : 'text-slate-600 dark:text-slate-300 hover:text-[#2E7D64] dark:hover:text-[#6FBF9A]' }} transition-colors" data-i18n="nav_calc">Kalkulator</a>
                     <a href="{{ route('about') }}" class="text-sm font-semibold {{ request()->routeIs('about') ? 'text-[#2E7D64] dark:text-[#6FBF9A] font-bold' : 'text-slate-600 dark:text-slate-300 hover:text-[#2E7D64] dark:hover:text-[#6FBF9A]' }} transition-colors" data-i18n="nav_about">Tentang Kami</a>
                     <a href="{{ route('news.index') }}" class="text-sm font-semibold {{ request()->routeIs('news.*') ? 'text-[#2E7D64] dark:text-[#6FBF9A] font-bold' : 'text-slate-600 dark:text-slate-300 hover:text-[#2E7D64] dark:hover:text-[#6FBF9A]' }} transition-colors" data-i18n="nav_news">Berita</a>
                     <a href="{{ route('home') }}#faq" class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-[#2E7D64] dark:hover:text-[#6FBF9A]' }} transition-colors" data-i18n="nav_faq">FAQ</a>
@@ -159,7 +159,7 @@
         {{-- Mobile Drawer Navigation --}}
         <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-3">
             <a href="{{ route('features') }}" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-[#2E7D64]" data-i18n="nav_features">Fitur Utama</a>
-            <a href="{{ route('home') }}#kalkulator" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-[#2E7D64]" data-i18n="nav_calc">Kalkulator Impian</a>
+            <a href="{{ route('calculator') }}" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-[#2E7D64]" data-i18n="nav_calc">Kalkulator Impian</a>
             <a href="{{ route('about') }}" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-[#2E7D64]" data-i18n="nav_about">Tentang Kami</a>
             <a href="{{ route('news.index') }}" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-[#2E7D64]" data-i18n="nav_news">Berita</a>
             <a href="{{ route('home') }}#faq" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-[#2E7D64]" data-i18n="nav_faq">FAQ</a>
