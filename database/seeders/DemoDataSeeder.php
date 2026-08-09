@@ -53,16 +53,7 @@ class DemoDataSeeder extends Seeder
         ];
 
         foreach ($users as $userData) {
-            $user = User::updateOrCreate(['email' => $userData['email']], $userData);
-
-            // Create Wallet for User
-            Wallet::updateOrCreate(
-                ['user_id' => $user->id, 'provider_type' => 'manual'],
-                [
-                    'provider_status' => 'connected',
-                    'balance' => 3450000.00,
-                ]
-            );
+            User::updateOrCreate(['email' => $userData['email']], $userData);
         }
 
         $dinda = User::where('email', 'dinda@impidream.id')->first();
@@ -121,6 +112,15 @@ class DemoDataSeeder extends Seeder
 
         foreach ($sampleDreams as $dreamData) {
             $dream = Dream::create($dreamData);
+
+            // Create Wallet for Dream
+            Wallet::create([
+                'dream_id' => $dream->id,
+                'user_id' => $dream->user_id,
+                'provider_type' => 'manual',
+                'provider_status' => 'active',
+                'balance' => $dream->current_amount,
+            ]);
 
             // Add progress log
             if ($dream->current_amount > 0) {
