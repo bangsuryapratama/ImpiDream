@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Web\Admin\AuthController;
 use App\Http\Controllers\Web\Admin\DashboardController;
+use App\Http\Controllers\Web\Admin\DreamController as AdminDreamController;
 use App\Http\Controllers\Web\Admin\MarketplaceController as AdminMarketplaceController;
+use App\Http\Controllers\Web\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Web\NewsController;
 use App\Http\Middleware\EnsureAdmin;
 use Illuminate\Support\Facades\Route;
@@ -84,6 +86,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::post('/marketplace', [AdminMarketplaceController::class, 'store'])->name('marketplace.store');
         Route::post('/marketplace/{id}/toggle', [AdminMarketplaceController::class, 'toggleStatus'])->name('marketplace.toggle');
         Route::delete('/marketplace/{id}', [AdminMarketplaceController::class, 'destroy'])->name('marketplace.destroy');
+
+        // User App Management
+        Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');
+        Route::delete('/users/{id}', [AdminUserController::class, 'destroy'])->name('users.destroy');
+
+        // Dreams Monitoring
+        Route::get('/dreams', [AdminDreamController::class, 'index'])->name('dreams.index');
+        Route::delete('/dreams/{id}', [AdminDreamController::class, 'destroy'])->name('dreams.destroy');
 
         Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     });
