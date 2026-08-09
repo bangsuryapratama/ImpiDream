@@ -70,11 +70,11 @@
                     <div>
                         <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 uppercase tracking-wider">Kategori Impian</label>
                         <select id="calcCategory" class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-[#2E7D64] outline-none">
-                            <option value="Elektronik" selected>💻 Gadget & Produktivitas</option>
-                            <option value="Kendaraan">🛵 Kendaraan & Mobilitas</option>
-                            <option value="Travel & Liburan">✈️ Travel & Liburan</option>
-                            <option value="Life Milestone">💍 Momen & Pernikahan</option>
-                            <option value="Umum">🎯 Kebutuhan Lainnya</option>
+                            <option value="Elektronik" selected>Gadget & Produktivitas</option>
+                            <option value="Kendaraan">Kendaraan & Mobilitas</option>
+                            <option value="Travel & Liburan">Travel & Liburan</option>
+                            <option value="Life Milestone">Momen & Pernikahan</option>
+                            <option value="Umum">Kebutuhan Lainnya</option>
                         </select>
                     </div>
                 </div>
