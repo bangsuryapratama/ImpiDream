@@ -128,8 +128,8 @@
                 {{-- Right Actions: Language Switcher + Theme Toggle + CTA --}}
                 <div class="flex items-center gap-3">
                     
-                    {{-- Language Switcher Button (ID / EN) --}}
-                    <button id="lang-toggle" aria-label="Ganti Bahasa" class="px-2.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 transition-all active:scale-95 flex items-center gap-1">
+                    {{-- Language Switcher Button (Temporarily Hidden) --}}
+                    <button id="lang-toggle" aria-label="Ganti Bahasa" class="hidden px-2.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/60 transition-all active:scale-95 flex items-center gap-1">
                         <span id="lang-text">ID</span>
                     </button>
 
