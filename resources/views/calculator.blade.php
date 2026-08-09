@@ -114,7 +114,7 @@
                             <svg class="w-4 h-4 text-emerald-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             <span>100% Menabung Mandiri Tanpa Bunga & Utang</span>
                         </div>
-                        <a href="{{ route('register') }}" class="w-full inline-flex items-center justify-center gap-2 py-3 px-6 bg-white text-[#2E7D64] hover:bg-emerald-50 rounded-xl font-bold text-sm shadow-md transition-all">
+                        <a href="{{ route('home') }}#download" class="w-full inline-flex items-center justify-center gap-2 py-3 px-6 bg-white text-[#2E7D64] hover:bg-emerald-50 rounded-xl font-bold text-sm shadow-md transition-all">
                             <span>Mulai Rencana Impian Ini</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                         </a>
