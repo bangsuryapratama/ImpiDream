@@ -114,7 +114,7 @@ class DemoDataSeeder extends Seeder
             $dream = Dream::create($dreamData);
 
             // Create Wallet for Dream
-            Wallet::create([
+            $wallet = Wallet::create([
                 'dream_id' => $dream->id,
                 'user_id' => $dream->user_id,
                 'provider_type' => 'manual',
@@ -126,9 +126,10 @@ class DemoDataSeeder extends Seeder
             if ($dream->current_amount > 0) {
                 DreamProgress::create([
                     'dream_id' => $dream->id,
+                    'wallet_id' => $wallet->id,
                     'amount' => $dream->current_amount,
                     'note' => 'Setoran Awal Tabungan Impian',
-                    'recorded_at' => now()->subDays(2),
+                    'recorded_date' => now()->subDays(2)->toDateString(),
                 ]);
             }
         }
